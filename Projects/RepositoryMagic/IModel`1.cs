@@ -1,7 +1,7 @@
 ﻿namespace RepositoryMagic
 {
-    public class IModel<TId>
+    public interface IModel<TId>
     {
-        public TId Id { get; set; }
+        TId Id { get; }
     }
 }
