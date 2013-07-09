@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CachedRepository.cs" />
     <Compile Include="DuplicateItemException.cs" />
     <Compile Include="IModel`1.cs" />
     <Compile Include="IRepository`2.cs" />

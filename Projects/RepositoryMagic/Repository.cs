@@ -5,7 +5,7 @@ namespace RepositoryMagic
 {
     public abstract class Repository<TModel, TId> : IRepository<TModel, TId> where TModel : IModel<TId>
     {
-        public void Delete(TId id)
+        public virtual void Delete(TId id)
         {
             if (id == null)
             {
@@ -22,7 +22,7 @@ namespace RepositoryMagic
 
         abstract protected void DeleteItem(TId id);
 
-        public bool Exists(TId id)
+        public virtual bool Exists(TId id)
         {
             if (id == null)
             {
@@ -32,7 +32,7 @@ namespace RepositoryMagic
             return this.ItemExists(id);
         }
 
-        public TModel Find(TId id)
+        public virtual TModel Find(TId id)
         {
             if (id == null)
             {
@@ -44,26 +44,26 @@ namespace RepositoryMagic
 
         abstract protected TModel FindItem(TId id);
 
-        public TModel Get(TId id)
+        public virtual TModel Get(TId id)
         {
-            if (id == null)
+            var item = this.Find(id);
+
+            if (item != null)
             {
-                throw new ArgumentNullException("id");
+                return item;
             }
 
-            return this.GetItem(id);
+            throw new ItemNotFoundException(string.Format("{0} does not exist.", this.ModelId(id)));
         }
 
-        public IEnumerable<TModel> Get()
+        public virtual IEnumerable<TModel> Get()
         {
             return this.GetItems();
         }
 
-        abstract protected TModel GetItem(TId id);
-
         abstract protected IEnumerable<TModel> GetItems();
 
-        public void Insert(TModel model)
+        public virtual void Insert(TModel model)
         {
             if (model == null)
             {
@@ -74,6 +74,7 @@ namespace RepositoryMagic
             {
                 throw new DuplicateItemException(String.Format("{0} cannot be inserted because it already exists.", this.ModelId(model.Id)));
             }
+
             this.InsertItem(model);
         }
 
@@ -81,12 +82,12 @@ namespace RepositoryMagic
 
         abstract protected bool ItemExists(TId id);
 
-        public string ModelId(TId id)
+        public virtual string ModelId(TId id)
         {
             return string.Format("{0}/{1}", typeof(TModel), id);
         }
 
-        public void Update(TModel model)
+        public virtual void Update(TModel model)
         {
             if (model == null)
             {
