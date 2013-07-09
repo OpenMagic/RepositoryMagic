@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{79C66B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryMagic", "Projects\RepositoryMagic\RepositoryMagic.csproj", "{385D4D7E-BCC6-4533-9463-0EAC8F833A42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryMagic.Tests", "Projects\RepositoryMagic.Tests\RepositoryMagic.Tests.csproj", "{6912461A-9CBD-4EB3-9673-139D6EACA1AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{385D4D7E-BCC6-4533-9463-0EAC8F833A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{385D4D7E-BCC6-4533-9463-0EAC8F833A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{385D4D7E-BCC6-4533-9463-0EAC8F833A42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6912461A-9CBD-4EB3-9673-139D6EACA1AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6912461A-9CBD-4EB3-9673-139D6EACA1AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6912461A-9CBD-4EB3-9673-139D6EACA1AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6912461A-9CBD-4EB3-9673-139D6EACA1AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
