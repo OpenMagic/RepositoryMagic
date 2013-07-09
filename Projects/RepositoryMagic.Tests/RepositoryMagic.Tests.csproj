@@ -42,7 +42,7 @@
       <HintPath>..\..\packages\FluentAssertions.2.0.1\lib\net35\FluentAssertions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <Choose>
@@ -58,6 +58,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CachedRepositoryTests.cs" />
     <Compile Include="IRepositoryTests.cs" />
     <Compile Include="MemoryRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
