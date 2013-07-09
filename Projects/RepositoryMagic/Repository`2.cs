@@ -7,11 +7,6 @@ namespace RepositoryMagic
     {
         public virtual void Delete(TId id)
         {
-            if (id == null)
-            {
-                throw new ArgumentNullException("id");
-            }
-
             if (!this.Exists(id))
             {
                 throw new ItemNotFoundException(String.Format("{0} cannot be deleted because it does not exist.", this.ModelId(id)));
@@ -24,21 +19,11 @@ namespace RepositoryMagic
 
         public virtual bool Exists(TId id)
         {
-            if (id == null)
-            {
-                throw new ArgumentNullException("id");
-            }
-
             return this.ItemExists(id);
         }
 
         public virtual TModel Find(TId id)
         {
-            if (id == null)
-            {
-                throw new ArgumentNullException("id");
-            }
-
             return this.FindItem(id);
         }
 
@@ -82,9 +67,21 @@ namespace RepositoryMagic
 
         abstract protected bool ItemExists(TId id);
 
-        public virtual string ModelId(TId id)
+        protected virtual string ModelId(TId id)
         {
-            return string.Format("{0}/{1}", typeof(TModel), id);
+            var name = typeof(TModel).Name;
+
+            // Refactor to pluralize.
+            if (name.EndsWith("y"))
+            {
+                name = name.Substring(0, name.Length - 1) + "ies";
+            }
+            else
+            {
+                name += "s";
+            }
+
+            return string.Format("{0}/{1}", name, id);
         }
 
         public virtual void Update(TModel model)
