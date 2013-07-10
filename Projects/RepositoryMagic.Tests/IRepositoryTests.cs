@@ -248,7 +248,7 @@ namespace RepositoryMagic.Tests
             repo.Update(model);
 
             // Then    
-            this.NewRepository().Get().Single().Should().Be(model);
+            this.NewRepository().Get().Single().ShouldBeEquivalentTo(model);
         }
 
         public class TestModel : IModel<int>
