@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using OpenMagic;
 
 namespace RepositoryMagic
 {
@@ -25,10 +26,7 @@ namespace RepositoryMagic
 
         public override bool Exists(TId id)
         {
-            if (id == null)
-            {
-                throw new ArgumentNullException("id");
-            }
+            id.MustNotBeNull("id");
 
             if (_Cache.ContainsKey(id))
             {
@@ -40,10 +38,7 @@ namespace RepositoryMagic
 
         public override TModel Find(TId id)
         {
-            if (id == null)
-            {
-                throw new ArgumentNullException("id");
-            }
+            id.MustNotBeNull("id");
 
             TModel model;
 

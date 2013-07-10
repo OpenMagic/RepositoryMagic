@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using OpenMagic;
 
 namespace RepositoryMagic
 {
@@ -50,10 +51,7 @@ namespace RepositoryMagic
 
         public virtual void Insert(TModel model)
         {
-            if (model == null)
-            {
-                throw new ArgumentNullException("model");
-            }
+            model.MustNotBeNull("model");
 
             if (this.Exists(model.Id))
             {
@@ -86,10 +84,7 @@ namespace RepositoryMagic
 
         public virtual void Update(TModel model)
         {
-            if (model == null)
-            {
-                throw new ArgumentNullException("model");
-            }
+            model.MustNotBeNull("model");
 
             if (!this.Exists(model.Id))
             {
