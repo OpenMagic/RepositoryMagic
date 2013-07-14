@@ -39,9 +39,9 @@
     <Reference Include="Dapper">
       <HintPath>..\..\packages\Dapper.1.13\lib\net35\Dapper.dll</HintPath>
     </Reference>
-    <Reference Include="OpenMagic, Version=0.1.14.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="OpenMagic, Version=0.1.15.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\OpenMagic.0.1.14.0\lib\net35-Client\OpenMagic.dll</HintPath>
+      <HintPath>..\..\packages\OpenMagic.0.1.15.0\lib\net35-Client\OpenMagic.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

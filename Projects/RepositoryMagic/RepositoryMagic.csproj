@@ -36,9 +36,9 @@
     <Reference Include="Common.Logging">
       <HintPath>..\..\packages\Common.Logging.2.1.2\lib\net35\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="OpenMagic, Version=0.1.14.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="OpenMagic, Version=0.1.15.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\OpenMagic.0.1.14.0\lib\net35-Client\OpenMagic.dll</HintPath>
+      <HintPath>..\..\packages\OpenMagic.0.1.15.0\lib\net35-Client\OpenMagic.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
