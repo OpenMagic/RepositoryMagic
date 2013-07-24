@@ -79,7 +79,7 @@ namespace RepositoryMagic.Tests
             repo.Delete(2);
 
             // Then
-            repo.Get().Should().Equal(
+            repo.Get().OrderBy(x => x.Id).Should().Equal(
                 from testModel in testModels
                 where testModel.Id != 2
                 select testModel
