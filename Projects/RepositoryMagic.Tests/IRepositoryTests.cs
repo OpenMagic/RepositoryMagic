@@ -181,19 +181,6 @@ namespace RepositoryMagic.Tests
         }
 
         [TestMethod]
-        public void Insert_ShouldThrow_ArgumentNullException_When_model_IsNull()
-        {
-            // Given
-            var repo = this.CleanRepository();
-
-            // When
-            Action action = () => repo.Insert(null);
-
-            // Then    
-            this.ShouldThrowArgumentNullException(action, "model");
-        }
-
-        [TestMethod]
         public void Insert_ShouldThrow_DuplicateItemException_When_model_AlreadyExists()
         {
             // Given
@@ -219,19 +206,6 @@ namespace RepositoryMagic.Tests
 
             // Then    
             repo.Get().Single().Should().BeSameAs(model);
-        }
-
-        [TestMethod]
-        public void Update_ShouldThrow_ArgumentNullException_When_model_IsNull()
-        {
-            // Given
-            var repo = this.CleanRepository();
-
-            // When
-            Action action = () => repo.Update(null);
-
-            // Then    
-            this.ShouldThrowArgumentNullException(action, "model");
         }
 
         [TestMethod]

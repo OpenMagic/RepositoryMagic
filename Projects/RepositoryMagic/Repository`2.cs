@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using NullGuard;
 using OpenMagic;
 
 namespace RepositoryMagic
@@ -23,6 +24,7 @@ namespace RepositoryMagic
             return this.ItemExists(id);
         }
 
+        [return: AllowNull]
         public virtual TModel Find(TId id)
         {
             return this.FindItem(id);

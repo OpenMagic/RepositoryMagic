@@ -87,7 +87,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CachedRepositoryTests.cs" />
-    <Compile Include="SQL\SqlRepositoryTests.cs" />
     <Compile Include="IRepositoryTests.cs" />
     <Compile Include="MemoryRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,6 +105,9 @@
   <ItemGroup>
     <None Include="Packages.config" />
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SQL\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
