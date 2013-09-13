@@ -44,9 +44,9 @@
       <HintPath>..\..\packages\NullGuard.Fody.0.7.1\Lib\portable-net4+sl4+wp7+win8+MonoAndroid16+MonoTouch40\NullGuard.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="OpenMagic, Version=0.1.22.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="OpenMagic, Version=0.1.27.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\OpenMagic.0.1.22.0\lib\net40\OpenMagic.dll</HintPath>
+      <HintPath>..\..\packages\OpenMagic.0.1.27.0\lib\net40\OpenMagic.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
