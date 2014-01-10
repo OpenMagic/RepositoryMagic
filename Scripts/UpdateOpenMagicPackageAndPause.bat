@@ -1,7 +1,7 @@
 @echo off
 pushd %~dp0
 
-cmd /c MyGet.bat
+cmd /c UpdateOpenMagicPackage.bat
 
 echo.
 echo.
