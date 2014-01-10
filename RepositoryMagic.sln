@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{37E8
 	ProjectSection(SolutionItems) = preProject
 		Scripts\MyGet.bat = Scripts\MyGet.bat
 		Scripts\MyGetAndPause.bat = Scripts\MyGetAndPause.bat
+		Scripts\Publish.bat = Scripts\Publish.bat
+		Scripts\PublishAndPause.bat = Scripts\PublishAndPause.bat
 		Scripts\UpdateOpenMagicPackage.bat = Scripts\UpdateOpenMagicPackage.bat
 		Scripts\UpdateOpenMagicPackageAndPause.bat = Scripts\UpdateOpenMagicPackageAndPause.bat
 	EndProjectSection
