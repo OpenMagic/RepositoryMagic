@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{79C66B
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
+		.nuget\RepositoryMagic.nuspec = .nuget\RepositoryMagic.nuspec
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryMagic", "Projects\RepositoryMagic\RepositoryMagic.csproj", "{385D4D7E-BCC6-4533-9463-0EAC8F833A42}"
@@ -20,6 +21,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
 		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{37E82838-E4CD-406D-9F07-10910947BC1E}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\MyGet.bat = Scripts\MyGet.bat
 	EndProjectSection
 EndProject
 Global
@@ -46,5 +52,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{79C66BA0-E869-4058-ADAF-282A2EA61DAD} = {65BFD1E6-ECBE-4862-9302-C8B7B5415DE4}
+		{37E82838-E4CD-406D-9F07-10910947BC1E} = {65BFD1E6-ECBE-4862-9302-C8B7B5415DE4}
 	EndGlobalSection
 EndGlobal
